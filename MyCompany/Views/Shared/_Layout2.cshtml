@@ -1,0 +1,93 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+    @await Html.PartialAsync("MetaTagsPartial")
+    @await Html.PartialAsync("CssPartial")  
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
+
+        <!-- Intro -->
+        @await Html.PartialAsync("IntroPartial")
+        
+
+        <!-- Header -->
+        @await Html.PartialAsync("HeaderPartial")
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li class="active"><a href="index.html">This is Massively</a></li>
+                <li><a href="generic.html">Generic Page</a></li>
+                <li><a href="elements.html">Elements Reference</a></li>
+            </ul>
+            <ul class="icons">
+                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Featured Post -->
+            <article class="post featured">
+                <header class="major">
+                    <span class="date">April 25, 2017</span>
+                    <h2>
+                        <a href="#">
+                            And this is a<br />
+                            massive headline
+                        </a>
+                    </h2>
+                    <p>
+                        @RenderBody()
+                    </p>
+                </header>
+                <a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a>
+                <ul class="actions special">
+                    <li><a href="#" class="button large">Full Story</a></li>
+                </ul>
+            </article>
+
+            <!-- Posts -->
+            @await Html.PartialAsync("PostsPartial")
+
+            <!-- Footer -->
+            <footer>
+                <div class="pagination">
+                    <!--<a href="#" class="previous">Prev</a>-->
+                    <a href="#" class="page active">1</a>
+                    <a href="#" class="page">2</a>
+                    <a href="#" class="page">3</a>
+                    <span class="extra">&hellip;</span>
+                    <a href="#" class="page">8</a>
+                    <a href="#" class="page">9</a>
+                    <a href="#" class="page">10</a>
+                    <a href="#" class="next">Next</a>
+                </div>
+            </footer>
+
+        </div>
+
+        <!-- Footer -->
+        @await Html.PartialAsync("FooterPartial")
+
+        <!-- Copyright -->
+        <div id="copyright">
+            <ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    @await  Html.PartialAsync("ScriptsPartial")
+   
+
+</body>
+</html>

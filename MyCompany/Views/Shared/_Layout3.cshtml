@@ -1,0 +1,86 @@
+﻿<!DOCTYPE HTML>
+
+<html>
+<head>
+    @*<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />*@
+    @await Html.PartialAsync("MetaTagsPartial")
+
+    @*<link rel="stylesheet" href="~/css/main.min.css" />
+    <noscript><link rel="stylesheet" href="~/css/noscript.min.css" /></noscript>*@
+    @await  Html.PartialAsync("CssPartial")
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
+
+        <!-- Intro -->
+        @await Html.PartialAsync("IntroPartial")
+
+        <!-- Header -->
+        <header id="header">
+            <a href="#" class="logo">Обрати курс</a>
+        </header>
+
+        <!-- Navigation -->
+        @await Html.PartialAsync("NavigationPartial")
+       
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Featured Post -->
+            <article class="post featured">
+                <header class="major">
+                    
+                    <h2>
+                        <a href="#">
+                            Про школу
+                        </a>
+                    </h2>
+                    <p>
+                        @RenderBody()
+                    </p>
+                </header>
+                <a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a>
+                <ul class="actions special">
+                    <li><a href="#" class="button large">Детальніше</a></li>
+                </ul>
+            </article>
+
+            <!-- Posts -->
+            @await Html.PartialAsync("PostsPartial")
+
+            <!-- Footer -->
+            <footer>
+                <div class="pagination">
+                    <!--<a href="#" class="previous">Prev</a>-->
+                    <a href="#" class="page active">1</a>
+                    <a href="#" class="page">2</a>
+                    <a href="#" class="page">3</a>
+                    <span class="extra">&hellip;</span>
+                    <a href="#" class="page">8</a>
+                    <a href="#" class="page">9</a>
+                    <a href="#" class="page">10</a>
+                    <a href="#" class="next">Next</a>
+                </div>
+            </footer>
+
+        </div>
+
+        <!-- Footer -->
+        @await Html.PartialAsync("FooterPartial")
+
+
+        <!-- Copyright -->
+        <div id="copyright">
+            <ul><li>&copy;2020 Vasilenko Law School</li></ul>
+        </div>
+
+    </div>
+
+    @await  Html.PartialAsync("ScriptsPartial")
+
+</body>
+</html>
