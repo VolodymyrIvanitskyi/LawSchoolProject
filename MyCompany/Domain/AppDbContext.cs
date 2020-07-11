@@ -21,10 +21,6 @@ namespace MyCompany.Domain
                 Id = "659AFCC4-39A1-485B-87E6-8D93E68DDA1D",
                 Name = "admin",
                 NormalizedName = "ADMIN"
-                //
-                //
-                //
-                //
             }
             );
 
@@ -42,7 +38,7 @@ namespace MyCompany.Domain
 
             modelbuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>
             {
-                RoleId = "19D12226-E8FA-42A8-B409-18E9B44BF99F",
+                RoleId = "659AFCC4-39A1-485B-87E6-8D93E68DDA1D",
                 UserId = "06501945-32A8-49FC-A2AA-FDF369B634C3"
             });
 
