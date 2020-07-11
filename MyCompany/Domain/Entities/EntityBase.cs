@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.VisualBasic.CompilerServices;
 
 namespace MyCompany.Domain.Entities
 {
@@ -37,6 +38,6 @@ namespace MyCompany.Domain.Entities
         public string MetaKeyWord{ get; set; }
 
         [DataType(DataType.Time)]
-        public DateType DateAdded { get; set; }
+        public DateTime DateAdded { get; set; }
     }
 }
