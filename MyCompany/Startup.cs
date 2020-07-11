@@ -56,9 +56,17 @@ namespace MyCompany
                 options.AccessDeniedPath = "/account/accessdenied";
                 options.SlidingExpiration = true;
             });
-            
+
+            //Налаштовуємо політику авторизація для Admin area
+            services.AddAuthorization(x => {
+                x.AddPolicy("AdminArea", policy => { policy.RequireRole("admin");  });
+            });
+
             //Добавляємо підтримку контроллерів і їх Views
-            services.AddControllersWithViews()
+            services.AddControllersWithViews(x =>
+            {
+                x.Conventions.Add(new AdminAreaAuthorization("Admin", "AdminArea")); 
+            })
             // Виставляємо підтримку з ASP Net Core 3.0
             .SetCompatibilityVersion(CompatibilityVersion.Version_3_0).AddSessionStateTempDataProvider();
         }
@@ -84,6 +92,7 @@ namespace MyCompany
             //Реєструємо потрібні нам маршрути
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute("admin", "{area:exists}/{controller=home}/{action=Index}/{id?}");
                 endpoints.MapControllerRoute("default", "{controller=home}/{action=Index}/{id?}");
             });
         }
