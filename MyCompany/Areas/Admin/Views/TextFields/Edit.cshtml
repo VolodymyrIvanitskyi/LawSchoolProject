@@ -1,6 +1,4 @@
-﻿
-@model TextField
-
+﻿@model TextField
 @{
     string strTitle = "Редагувати запис";
     ViewBag.Title = strTitle;
@@ -26,7 +24,7 @@
 
             <div>
                 <label asp-for="Text"></label>
-                <input asp-for="Text" />
+                <textarea asp-for="Text"></textarea>
                 <span asp-validation-for="Text"></span>
             </div>
 

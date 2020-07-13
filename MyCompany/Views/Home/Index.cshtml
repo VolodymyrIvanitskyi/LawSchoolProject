@@ -1,15 +1,50 @@
-﻿<div>
-    <h3>Про школу</h3>
+﻿@model TextField
+@{
+    ViewBag.Title = Model.MetaTitle;
+    ViewBag.Description = Model.MetaDescription;
+    ViewBag.Keywords = Model.MetaKeyWord; @*KeyWord or Keywords*@
+}
+<article class="post featured">
+    <header class="major">
+        <h2>
+            <a href="#">
+                @Config.CompanyName
+            </a>
+        </h2>
+        <p>
+            Vasilenko Law School - це проект, місія якого зробити юридичну освіту якісною та корисною.
+            Школа орієнтована на адвокатів та юристів з досвідом роботи.
+            У школі представлено сім найбільш актуальних курсів, які були обрані та розроблені за результатами опитувань адвокатів.
+        </p>
+    </header>
+    <a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a>
+    <ul class="actions special">
+        <li><a href="#" class="button large">Детальніше</a></li>
+    </ul>
+</article>
 
-    <p>
-        Vasilenko Law School - це проект, місія якого зробити юридичну освіту якісною та корисною.
+<!-- Posts -->
+@await Html.PartialAsync("PostsPartial")
 
-        Школа орієнтована на адвокатів та юристів з досвідом роботи.
+<!-- Footer -->
+<footer>
+    <div class="pagination">
+        <!--<a href="#" class="previous">Prev</a>-->
+        <a href="#" class="page active">1</a>
+        <a href="#" class="page">2</a>
+        <a href="#" class="page">3</a>
+        <span class="extra">&hellip;</span>
+        <a href="#" class="page">8</a>
+        <a href="#" class="page">9</a>
+        <a href="#" class="page">10</a>
+        <a href="#" class="next">Next</a>
+    </div>
+</footer>
 
-        У школі представлено сім найбільш актуальних курсів, які були обрані та розроблені за результатами опитувань адвокатів.
-    </p>
-</div>
-<a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a>
-<ul class="actions special">
-    <li><a href="#" class="button large">Детальніше</a></li>
-</ul>
+<!-- Footer -->
+@await Html.PartialAsync("FooterPartial")
+@* В самій формі в панелі адміністратора потім прописати код що вище
+    <div>
+        Html.Raw(Model.Text) @*З методом Raw потрібно бути обережним бо він екранує всі символи
+    </div>
+*@

@@ -22,7 +22,7 @@
                 {
                     <div>
                         <a asp-area="Admin" asp-controller="ServiceItems" asp-action="Edit" asp-route-id="@entity.Id">Редагувати</a>
-                        <form style="display:inline-block;" id="form-@entity.Id" asp-area="Admin" asp-controller="ServiceItem" asp-action="Delete" method="post">
+                        <form style="display:inline-block;" id="form-@entity.Id" asp-area="Admin" asp-controller="ServiceItems" asp-action="Delete" method="post">
                             <input type="hidden" name="id" value="@entity.Id"/>
                             <a href="#" onclick="document.getElementById('form-@entity.Id').submit();">Видалити</a>
                         </form>
@@ -34,10 +34,10 @@
             </div>
         }
     </div>
-    <div @**@>
+    <div>
         <h3>Редагувати сторінку сайту</h3>
         <a asp-area="Admin" asp-controller="TextFields" asp-action="Edit" asp-route-codeWord ="PageIndex">Головна</a><br />
-        <a asp-area="Admin" asp-controller="TextFields" asp-action="Edit" asp-route-codeWord ="PageServices">Наші послуги</a><br />
+        <a asp-area="Admin" asp-controller="TextFields" asp-action="Edit" asp-route-codeWord ="PageServices">Курси</a><br />
         <a asp-area="Admin" asp-controller="TextFields" asp-action="Edit" asp-route-codeWord ="PageContacts">Контакти</a><br />
     </div>
     <div class="div-box">

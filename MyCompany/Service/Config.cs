@@ -13,6 +13,7 @@ namespace MyCompany.Service
         public static string CompanyPhoneShort { get; set; }
         public static string CompanyEmail { get; set; }
         public static string Date { get; set; }
+        public static string CompanyAddress { get; set; }
         
 
     }

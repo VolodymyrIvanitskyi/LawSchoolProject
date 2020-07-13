@@ -1,0 +1,11 @@
+﻿@model TextField
+@{
+    ViewBag.Title = Model.MetaTitle;
+    ViewBag.Description = Model.MetaDescription;
+    ViewBag.Keywords = Model.MetaKeyWord; @*KeyWord or Keywords*@
+}
+
+<div>
+    @Html.Raw(Model.Text) @*З методом Raw потрібно бути обережним бо він екранує всі символи *@
+</div>
+

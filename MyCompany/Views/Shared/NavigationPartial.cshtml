@@ -1,8 +1,8 @@
 ﻿<nav id="nav">
     <ul class="links">
-        <li class="active"><a href="#">Головна сторінка</a></li>
-        <li><a href="#">Переваги</a></li>
-        <li><a href="#">Зворотній зв'язок</a></li>
+        <li class="active"><a asp-area="" asp-controller="Home" asp-action="Index">Головна сторінка</a></li>
+        <li><a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="">Курси</a></li>
+        <li><a asp-area="" asp-controller="Home" asp-action="Contacts">Контакти</a></li>
     </ul>
     <ul class="icons">
         <li><a href="#" class="icon brands fa-telegram"><span class="label">Twitter</span></a></li>
