@@ -1,4 +1,4 @@
-﻿@import url(../css/fontawesome-all.min.css);
+﻿@import url(../sass/fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
 /*
 	Massively by HTML5 UP
@@ -54,11 +54,11 @@ input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
-/*input, select, textarea {
+input, select, textarea {
   -moz-appearance: none;
   -webkit-appearance: none;
   -ms-appearance: none;
-  appearance: none; }*/
+  appearance: none; }
 
 /* Basic */
 @-ms-viewport {
@@ -1555,7 +1555,8 @@ input[type="radio"]:focus + label:before {
 .image {
   border: 0;
   display: inline-block;
-  position: relative; }
+  position: relative;
+  max-width: 100%; }
   .image img {
     display: block; }
   .image.left, .image.right {
